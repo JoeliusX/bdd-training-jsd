@@ -77,6 +77,9 @@ module.exports = class CartItem {
 
     #validateQuantity(quantity) {
         //TODO Implement this method
+        if (typeof quantity !== "number" || quantity < 1) {
+            throw new InvalidQuantityException();
+        }
     }
 
     #validatePrice(price) {
